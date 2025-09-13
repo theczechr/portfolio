@@ -39,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/cursor-memory-bank
+IMPLEMENTATION_LOG.md
+DESIGN_SYSTEM.md
+BUILD_SPEC.md
+activeContext.md
+progress.md
+projectbrief.md
+SAMPLE_CONTENT.md
+tasks.md
