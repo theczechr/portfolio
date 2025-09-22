@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Robin Jarůšek - Frontend Engineer",
+  title: "Robin Jarůšek - AI & Fullstack Engineer",
   description:
-    "Portfolio of Robin Jarůšek, a passionate frontend engineer building accessible tools for the web.",
+    "Portfolio of Robin Jarůšek, a passionate AI & fullstack engineer building accessible tools.",
   icons: {
     icon: "/portfolio.svg",
   },
@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="antialiased">{children}</body>
     </html>
   );

@@ -50,12 +50,12 @@ export default function Home() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Call once on mount
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Smooth scroll to section with Lenis (fallback to native smooth scroll)
+  // Smooth scroll to section with Lenis
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (!section) return;
@@ -77,11 +77,8 @@ export default function Home() {
             {/* Header Section */}
             <header>
               <h1 className="text-name">Robin Jarůšek</h1>
-              <p className="text-title">AI | Fullstack Developer</p>
-              <p className="text-bio">
-                I am passionate about building web applications and mobile
-                applications.
-              </p>
+              <p className="text-title">AI | Fullstack Engineer</p>
+              <p className="text-bio">I like to build cool stuff that works.</p>
             </header>
 
             {/* Navigation Menu */}
@@ -156,19 +153,25 @@ export default function Home() {
           <section id="about" className="section" style={{ paddingLeft: 24 }}>
             <h2 className="section-title-mobile">About</h2>
             <p className="card-description">
-              I'm a developer passionate about x. I dabble between Python and
-              JS, mostly React. Definitely leaning more towards backend stuff.
-              I'm a quick learner. I like cool tech nerdy stuff. I started
-              building in python in 2020.
+              I'm a developer who loves experimenting with new technology and
+              building cool, nerdy projects. I mainly work with Python and
+              JavaScript (especially React). I've been coding since 2020,
+              starting out in Python, and I'm always eager to pick up new skills
+              and tools.
             </p>
             <p className="card-description">
-              Currently, working on AI. I'm in my second year of Bachelor's
-              degree at VUT FIT in Brno. I'm a big fan of AI/ML and LLMs. I'm
-              also interested in blockchain, cybersecurity, and game
-              development. I like open-source software and have a few projects
-              published publicly, and so is this portfolio.
+              Currently, I'm working as an AI Software Engineer while studying
+              Computer Science in my second year at VUT FIT in Brno. I'm
+              passionate about AI, machine learning, and large language models.
+              I also enjoy exploring blockchain, cybersecurity, and game
+              development. I value open-source software and try to publish most
+              of my projects publicly.
             </p>
-            <p className="card-description">Free Albania.</p>
+            <p className="card-description">
+              Outside of work and studies, I like to challenge myself with side
+              projects that blend my interests and tech. I enjoy learning by
+              doing and sharing what I create openly.
+            </p>
           </section>
 
           {/* Experience Section */}
@@ -212,21 +215,31 @@ export default function Home() {
                       }}
                     >
                       <span style={{ margin: "0 0.5rem" }}>·</span>
-                      Apertia tech s.r.o.
+                      Apertia tech
                     </span>
                   </div>
                   <p className="card-description">
-                    Lead frontend development for enterprise web applications,
-                    focusing on React ecosystem and performance optimization.
+                    Designing and building Agentic AI, chatbots, custom AI data
+                    analysis, browser automation and various internal tools to
+                    accelerate company processes. Heavily utilizing cutting edge
+                    open-source projects, LLMs, APIs and tools.
                   </p>
+                  <ResourceLinks
+                    links={[
+                      {
+                        href: "https://apertia.ai/",
+                        label: "Website",
+                      },
+                    ]}
+                  />
 
                   <div>
                     <span className="tech-tag">Python</span>
                     <span className="tech-tag">LangChain</span>
                     <span className="tech-tag">RAG</span>
                     <span className="tech-tag">LLMs</span>
-                    <span className="tech-tag">SQL</span>
                     <span className="tech-tag">Vector DBs</span>
+                    <span className="tech-tag">SQL</span>
                   </div>
                 </div>
               </div>
@@ -273,10 +286,22 @@ export default function Home() {
                     </span>
                   </div>
                   <p className="card-description">
-                    Built responsive web applications from concept to
-                    deployment. Implemented modern frontend architectures and
-                    design systems.
+                    Developed Plantiful, a plant-care app designed to help users
+                    manage and care for their plants in a small 3-person team.
+                    Handled the entire development process, from planning and
+                    design to implementation and testing, while balancing work
+                    and resources. Implemented features such as plant
+                    recognition, watering reminders, room layouts, and care
+                    tips.
                   </p>
+                  <ResourceLinks
+                    links={[
+                      {
+                        href: "https://www.kyndryl.com/cz/cs",
+                        label: "Website",
+                      },
+                    ]}
+                  />
 
                   <div>
                     <span className="tech-tag">TypeScript</span>
@@ -319,15 +344,15 @@ export default function Home() {
                   <p className="card-description">
                     A cross-platform mobile application designed to help users
                     take care of their plants utilizing AI, image recognition
-                    APIs and algorithmization. Our features offer flower
-                    recognition through AI, watering reminders, and all the
-                    important information about your plants. Completely
-                    open-source.
+                    APIs and algorithmization. With features such as flower
+                    recognition through AI, watering reminders, room layouts,
+                    and all the important information about your plants.
+                    Completely open-sourced.
                   </p>
                   <ResourceLinks
                     links={[
                       {
-                        href: "/Plant_Care.pdf",
+                        href: "/Plantiful.pdf",
                         label: "Research paper",
                       },
                       {
@@ -378,9 +403,9 @@ export default function Home() {
                 <div style={{ flex: 1 }}>
                   <h3 className="card-title">Ombra</h3>
                   <p className="card-description">
-                    A full-stack web admin panel for a game dev company to
-                    manage their products and subscriptions using Next.js,
-                    Tailwind CSS, shadcn/ui, Flask and SQLAlchemy.
+                    A full-stack admin panel for a game development company to
+                    manage products and subscriptions, built with React,
+                    Tailwind CSS, shadcn/ui, and Flask with SQLAlchemy.
                   </p>
 
                   <div>
@@ -424,7 +449,12 @@ export default function Home() {
                     frameworks.
                   </p>
                   <ResourceLinks
-                    links={[{ href: "https://example.com", label: "GitHub" }]}
+                    links={[
+                      {
+                        href: "https://github.com/theczechr/hyprfolio",
+                        label: "GitHub",
+                      },
+                    ]}
                   />
                   <div>
                     <span className="tech-tag">JavaScript</span>
@@ -516,13 +546,17 @@ export default function Home() {
                 <div style={{ flex: 1 }}>
                   <h3 className="card-title">This portfolio</h3>
                   <p className="card-description">
-                    Full-stack task management application with real-time
-                    updates, drag-and-drop functionality, and team collaboration
-                    features. Built with modern web technologies and optimized
-                    for performance across all devices.
+                    Built with Next.js 15 and React 19, featuring Lenis-powered
+                    smooth scrolling and Tailwind CSS. Clean, responsive layout
+                    for About, Experience, and Projects; open source.
                   </p>
                   <ResourceLinks
-                    links={[{ href: "https://example.com", label: "GitHub" }]}
+                    links={[
+                      {
+                        href: "https://github.com/theczechr/portfolio",
+                        label: "GitHub",
+                      },
+                    ]}
                   />
                   <div>
                     <span className="tech-tag">React</span>

@@ -15,7 +15,8 @@
   <a href="https://react.dev">React 19</a> •
   <a href="https://tailwindcss.com">Tailwind CSS v4</a> •
   <a href="https://www.typescriptlang.org/">TypeScript</a> •
-  <a href="https://vercel.com/">Vercel</a>
+  <a href="https://vercel.com/">Vercel</a> •
+  <a href="https://github.com/darkroomengineering/lenis">Lenis</a>
 </p>
 
 ---
@@ -40,40 +41,21 @@ Clone and install:
 ```bash
 git clone <your-repo-url> portfolio
 cd portfolio
-pnpm install   # or npm install / yarn / bun install
+pnpm install   # or your package manager of choice
 ```
 
 Run locally:
 
 ```bash
-pnpm dev       # or npm run dev / yarn dev / bun dev
-# http://localhost:3000
+pnpm dev
 ```
 
 Build and start:
 
 ```bash
-pnpm build     # or npm run build / yarn build / bun run build
-pnpm start     # or npm run start / yarn start / bun run start
+pnpm build
+pnpm start
 ```
-
-## Scripts
-
-```json
-{
-  "dev": "next dev --turbopack",
-  "build": "next build --turbopack",
-  "start": "next start"
-}
-```
-
-## Tech Stack
-
-- `Next.js 15` (App Router)
-- `React 19`
-- `Tailwind CSS v4`
-- `TypeScript`
-- `Lenis` for smooth scrolling
 
 ## Project Structure
 
@@ -88,26 +70,8 @@ tsconfig.json        # TypeScript configuration
 package.json         # Scripts and dependencies
 ```
 
-## Customization
-
-- Edit content in `app/page.tsx` and structure in `app/layout.tsx`.
-- Update global styles in `app/globals.css` (Tailwind v4).
-- Add images and documents to `public/` (e.g., `public/logo-dark.svg`, `public/Plant_Care.pdf`).
-
-## Deployment
-
-Deploy instantly with Vercel:
-
-1. Push to GitHub/GitLab/Bitbucket
-2. Import the repo into Vercel
-3. Framework preset: Next.js → Deploy
-
-Detailed guide: [Next.js deployment docs](https://nextjs.org/docs/app/building-your-application/deploying).
-
 ## License
 
 MIT © Robin. Feel free to use this as a starting point for your own portfolio.
 
 ---
-
-If you have feedback or ideas, feel free to open an issue or start a discussion.
