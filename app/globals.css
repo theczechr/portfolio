@@ -620,4 +620,12 @@ body::-webkit-scrollbar {
   #projects .card .project-icon-mobile img {
     display: block;
   }
+
+  /* Slightly larger Plantiful icon for visual parity */
+  #projects .card .project-icon-mobile.plantiful-icon img,
+  #projects .card .project-icon-mobile.plantiful-icon picture img {
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 10px !important;
+  }
 }

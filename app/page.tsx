@@ -374,7 +374,7 @@ export default function Home() {
                 </div>
                 <div style={{ flex: 1 }}>
                   <div className="project-header">
-                    <div className="project-icon-mobile">
+                    <div className="project-icon-mobile plantiful-icon">
                       <Image
                         src="/adaptive-icon.png"
                         alt="Plantiful App Icon"
