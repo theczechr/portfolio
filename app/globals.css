@@ -380,10 +380,12 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-/* Desktop/tablet: keep new mobile header hidden, show original meta icon */
-#projects .card .project-header,
+/* Desktop/tablet: hide only the inline mobile icon; keep header visible */
 #projects .card .project-icon-mobile {
   display: none;
+}
+#projects .card .project-header {
+  display: block;
 }
 
 .social-icons {
