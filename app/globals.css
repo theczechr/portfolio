@@ -3,8 +3,8 @@
 
 :root {
   /* Primary Colors */
-  --bg-primary: #081232; /* Deep navy blue background */
-  --text-primary: #ffffff; /* Pure white for headers/important */
+  --bg-primary: #0c1222; /* Deep navy blue background */
+  --text-primary: #c9d7e3; /* Primary text color */
   --text-secondary: #94a3b8; /* Slate grey for body text */
   --text-muted: #64748b; /* Darker grey for meta/dates */
   --accent-primary: #f4a164; /* Warm orange for tech tags */
@@ -16,14 +16,12 @@
   --card-bg: rgba(255, 255, 255, 0.03); /* Subtle card background */
   --border-subtle: rgba(255, 255, 255, 0.1); /* Subtle borders */
 
-  --font-family: "Lexend", sans-serif;
-
   /* Font Sizes */
   --text-5xl: 3rem; /* 48px - Name/Hero */
   --text-2xl: 1.5rem; /* 24px - Job title */
   --text-xl: 1.25rem; /* 20px - Section headers */
   --text-lg: 1.125rem; /* 18px - Card titles */
-  --text-base: 1rem; /* 16px - Body text */
+  --text-base: 1.08rem; /* 16px - Body text */
   --text-sm: 0.875rem; /* 14px - Meta/dates */
   --text-xs: 0.75rem; /* 12px - Tags */
 
@@ -52,9 +50,9 @@
 
   /* Layout Spacing */
   --sidebar-width: 500px;
-  --sidebar-padding: var(--space-20);
-  --content-padding: 8rem;
-  --section-gap: 8rem;
+  --sidebar-padding: var(--content-padding);
+  --content-padding: 11rem;
+  --section-gap: 6rem;
   --card-gap: var(--space-8);
   /* Card layout measurements */
   --meta-col: 140px;
@@ -121,9 +119,10 @@ body::-webkit-scrollbar {
   position: sticky;
   top: 0;
   height: 100vh;
-  overflow: hidden;
-  padding: var(--sidebar-padding);
+  overflow: visible;
+  padding: 0 var(--sidebar-padding);
   padding-top: 6rem;
+  padding-bottom: var(--space-20);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -151,6 +150,8 @@ body::-webkit-scrollbar {
   font-weight: var(--font-normal);
   color: var(--text-primary);
   margin-top: var(--space-2);
+  white-space: nowrap;
+  overflow: visible;
 }
 
 .text-header {
@@ -165,7 +166,7 @@ body::-webkit-scrollbar {
   color: var(--text-secondary);
   line-height: var(--leading-relaxed);
   margin: var(--space-8) 0;
-  font-weight: var(--font-light);
+  font-weight: var(--font-normal);
 }
 
 .navigation {
@@ -223,8 +224,8 @@ body::-webkit-scrollbar {
   background: #083334;
   color: #4fd1c7;
   font-size: var(--text-xs);
-  font-weight: var(--font-medium);
-  padding: var(--space-2) var(--space-3);
+  font-weight: var(--font-semibold);
+  padding: var(--space-1) var(--space-3);
   border-radius: 9999px;
   margin: var(--space-1);
   transition: all 0.2s ease;
@@ -239,8 +240,8 @@ body::-webkit-scrollbar {
   background: transparent;
   border: 1px solid transparent;
   border-radius: var(--space-3);
-  padding: var(--space-6);
-  margin-bottom: var(--space-6);
+  padding: var(--space-8);
+  margin-bottom: var(--space-0);
   transition: all 0.2s ease;
 }
 
@@ -263,7 +264,7 @@ body::-webkit-scrollbar {
   font-size: var(--text-lg);
   font-weight: var(--font-semibold);
   color: var(--text-primary);
-  margin-bottom: var(--space-2);
+  margin-bottom: 0;
 }
 
 .card-meta {
@@ -274,11 +275,35 @@ body::-webkit-scrollbar {
 }
 
 .card-description {
-  font-size: var(--text-base);
+  font-size: 1rem;
   color: var(--text-secondary);
   line-height: var(--leading-relaxed);
-  margin-bottom: var(--space-4);
-  font-weight: var(--font-light);
+  margin-top: var(--space-1);
+  margin-bottom: var(--space-2);
+  font-weight: var(--font-normal);
+}
+#about .card-description {
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+}
+#about .card-description a {
+  color: var(--text-primary);
+  font-weight: var(--font-semibold);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+#about .card-description a:hover,
+#about .card-description a:focus-visible {
+  color: #4fd1c7;
+  outline: none;
+}
+/* Ensure visited links don't change hue */
+#about .card-description a:visited {
+  color: var(--text-primary);
+}
+#about .card-description a:visited:hover,
+#about .card-description a:visited:focus-visible {
+  color: #4fd1c7;
 }
 
 /* Generic two-column content row to align with card layout */
@@ -317,16 +342,17 @@ body::-webkit-scrollbar {
   gap: var(--space-4);
   align-items: center;
   flex-wrap: wrap;
-  margin: var(--space-3) 0;
+  margin: var(--space-2) 0;
 }
 .resource-link {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
   font-size: var(--text-sm);
-  color: var(--text-secondary);
+  color: var(--text-primary);
   text-decoration: none;
   transition: color 0.2s ease;
+  font-weight: var(--font-semibold);
 }
 .resource-link::before {
   content: "🔗";
@@ -380,6 +406,33 @@ body::-webkit-scrollbar {
 .social-icon:focus svg *,
 .social-icon:focus-visible svg * {
   fill: currentColor;
+}
+
+.cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.cta-link .arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.cta-link:hover,
+.cta-link:focus-visible {
+  color: #4fd1c7;
+  outline: none;
+}
+.cta-link:hover .arrow,
+.cta-link:focus-visible .arrow {
+  transform: translateY(-2px);
+}
+.cta-container {
+  margin-top: var(--space-4);
 }
 
 @media (max-width: 1023px) {

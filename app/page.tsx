@@ -78,7 +78,9 @@ export default function Home() {
             <header>
               <h1 className="text-name">Robin Jarůšek</h1>
               <p className="text-title">AI | Fullstack Engineer</p>
-              <p className="text-bio">I like to build cool stuff that works.</p>
+              <p className="text-bio" style={{ whiteSpace: "nowrap" }}>
+                I like to build cool stuff that works.
+              </p>
             </header>
 
             {/* Navigation Menu */}
@@ -160,12 +162,14 @@ export default function Home() {
               and tools.
             </p>
             <p className="card-description">
-              Currently, I'm working as an AI Software Engineer while studying
-              Computer Science in my second year at VUT FIT in Brno. I'm
-              passionate about AI, machine learning, and large language models.
-              I also enjoy exploring blockchain, cybersecurity, and game
-              development. I value open-source software and try to publish most
-              of my projects publicly.
+              Currently, I'm working as an AI Software Engineer at{" "}
+              <a href="https://apertia.ai/">Apertia</a> while studying Computer
+              Science in my second year at{" "}
+              <a href="https://fit.vut.cz/">VUT FIT</a> in Brno. I'm passionate
+              about AI, machine learning, and large language models. I also
+              enjoy exploring blockchain, cybersecurity, and game development. I
+              value open-source software and try to publish most of my projects
+              publicly.
             </p>
             <p className="card-description">
               Outside of work and studies, I like to challenge myself with side
@@ -198,7 +202,7 @@ export default function Home() {
                       display: "flex",
                       alignItems: "baseline",
                       gap: 0,
-                      marginBottom: "1rem",
+                      marginBottom: "0.3rem",
                     }}
                   >
                     <h3 className="card-title" style={{ marginBottom: 0 }}>
@@ -265,7 +269,7 @@ export default function Home() {
                       display: "flex",
                       alignItems: "baseline",
                       gap: 0,
-                      marginBottom: "1rem",
+                      marginBottom: 0,
                     }}
                   >
                     <h3 className="card-title" style={{ marginBottom: 0 }}>
@@ -307,11 +311,28 @@ export default function Home() {
                     <span className="tech-tag">TypeScript</span>
                     <span className="tech-tag">React Native</span>
                     <span className="tech-tag">Firebase</span>
-                    <span className="tech-tag">SCSS</span>
+                    <span className="tech-tag">Tailwind CSS</span>
                     <span className="tech-tag">Expo</span>
                   </div>
                 </div>
               </div>
+            </div>
+            {/* Resume */}
+            <div
+              className="cta-container"
+              style={{
+                paddingLeft: "2.2rem",
+                marginBottom: "2rem",
+              }}
+            >
+              <a
+                href="/jarusek_cv_en.pdf"
+                className="cta-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Full Résumé <span className="arrow">↗</span>
+              </a>
             </div>
           </section>
 
@@ -353,7 +374,7 @@ export default function Home() {
                     links={[
                       {
                         href: "/Plantiful.pdf",
-                        label: "Research paper",
+                        label: "Research",
                       },
                       {
                         href: "https://github.com/plantiful/app",
@@ -364,8 +385,12 @@ export default function Home() {
                         label: "Website",
                       },
                       {
+                        href: "https://www.purkynka.cz/aktualne/dostali-jsme-se-do-top-desitky-ja-studentskych-firem-letosniho-roku/",
+                        label: "Article",
+                      },
+                      {
                         href: "https://www.youtube.com/watch?v=zZ-SUUvdznc",
-                        label: "Promo Video",
+                        label: "Video",
                       },
                     ]}
                   />
@@ -414,7 +439,7 @@ export default function Home() {
                     <span className="tech-tag">Python</span>
                     <span className="tech-tag">Flask</span>
                     <span className="tech-tag">Tailwind CSS</span>
-                    <span className="tech-tag">SQLite</span>
+                    <span className="tech-tag">SQL</span>
                   </div>
                 </div>
               </div>
