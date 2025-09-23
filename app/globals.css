@@ -267,6 +267,13 @@ body::-webkit-scrollbar {
   margin-bottom: 0;
 }
 
+/* Ensure title rows align inline by default */
+.title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+}
+
 .card-meta {
   font-size: var(--text-sm);
   color: var(--text-muted);
@@ -284,7 +291,7 @@ body::-webkit-scrollbar {
 }
 #about .card-description {
   font-size: var(--text-base);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-normal);
 }
 #about .card-description a {
   color: var(--text-primary);
@@ -370,6 +377,12 @@ body::-webkit-scrollbar {
 }
 
 .section-title-mobile {
+  display: none;
+}
+
+/* Desktop/tablet: keep new mobile header hidden, show original meta icon */
+#projects .card .project-header,
+#projects .card .project-icon-mobile {
   display: none;
 }
 
@@ -486,14 +499,23 @@ body::-webkit-scrollbar {
 
   .text-title {
     font-size: 1.25rem;
+    margin-top: var(--space-2);
+  }
+
+  .text-bio {
+    margin: var(--space-3) 0;
   }
 
   .navigation {
-    flex-direction: column;
+    display: none;
+  }
+
+  .social-icons {
+    margin-top: var(--space-3);
   }
 
   .card {
-    padding: var(--space-4);
+    padding: var(--space-3);
   }
 
   /* Mobile card layout */
@@ -503,6 +525,23 @@ body::-webkit-scrollbar {
     flex-direction: column !important;
     gap: 0.5rem !important;
     align-items: flex-start !important;
+  }
+
+  /* Keep card title rows inline on mobile */
+  .card .title-row {
+    flex-direction: row !important;
+    gap: 0 !important;
+    align-items: baseline !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .card .title-row > h3.card-title {
+    min-width: 0;
+    flex: 0 1 auto;
+  }
+
+  .card .title-row > span.card-title {
+    white-space: nowrap;
   }
 
   /* Ensure About section's content-row stacks similarly on mobile */
@@ -554,7 +593,31 @@ body::-webkit-scrollbar {
   }
 
   .right-content {
-    padding: 2rem;
-    padding-top: 4rem;
+    padding: 1rem;
+    padding-top: 3rem;
+  }
+
+  /* Projects: place icon to the right of title on the same row */
+  #projects .card > div {
+    position: relative;
+  }
+  /* Hide left-side meta icon and show inline header icon on mobile */
+  #projects .card .card-meta {
+    display: none !important;
+  }
+  #projects .card .project-header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end; /* bottom-align title and icon */
+    justify-content: flex-start;
+    gap: var(--space-3);
+  }
+  #projects .card .project-icon-mobile {
+    display: inline-block;
+    line-height: 0; /* remove inline gap around image */
+    align-self: flex-end;
+  }
+  #projects .card .project-icon-mobile img {
+    display: block;
   }
 }

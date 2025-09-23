@@ -198,10 +198,8 @@ export default function Home() {
                 </div>
                 <div style={{ flex: 1 }}>
                   <div
+                    className="title-row"
                     style={{
-                      display: "flex",
-                      alignItems: "baseline",
-                      gap: 0,
                       marginBottom: "0.3rem",
                     }}
                   >
@@ -243,6 +241,7 @@ export default function Home() {
                     <span className="tech-tag">RAG</span>
                     <span className="tech-tag">LLMs</span>
                     <span className="tech-tag">Vector DBs</span>
+                    <span className="tech-tag">GraphRAG</span>
                     <span className="tech-tag">SQL</span>
                   </div>
                 </div>
@@ -265,10 +264,8 @@ export default function Home() {
                 </div>
                 <div style={{ flex: 1 }}>
                   <div
+                    className="title-row"
                     style={{
-                      display: "flex",
-                      alignItems: "baseline",
-                      gap: 0,
                       marginBottom: 0,
                     }}
                   >
@@ -331,7 +328,22 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                View Full Résumé <span className="arrow">↗</span>
+                View Full Résumé
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  width="16"
+                  height="16"
+                  className="arrow"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                    clipRule="evenodd"
+                  />
+                </svg>
               </a>
             </div>
           </section>
@@ -361,7 +373,18 @@ export default function Home() {
                   />
                 </div>
                 <div style={{ flex: 1 }}>
-                  <h3 className="card-title">Plantiful</h3>
+                  <div className="project-header">
+                    <div className="project-icon-mobile">
+                      <Image
+                        src="/adaptive-icon.png"
+                        alt="Plantiful App Icon"
+                        width={36}
+                        height={36}
+                        style={{ borderRadius: "8px" }}
+                      />
+                    </div>
+                    <h3 className="card-title">Plantiful</h3>
+                  </div>
                   <p className="card-description">
                     A cross-platform mobile application designed to help users
                     take care of their plants utilizing AI, image recognition
@@ -426,7 +449,18 @@ export default function Home() {
                   />
                 </div>
                 <div style={{ flex: 1 }}>
-                  <h3 className="card-title">Ombra</h3>
+                  <div className="project-header">
+                    <div className="project-icon-mobile">
+                      <Image
+                        src="/logo-dark.svg"
+                        alt="Ombra Logo"
+                        width={36}
+                        height={36}
+                        style={{ borderRadius: "8px" }}
+                      />
+                    </div>
+                    <h3 className="card-title">Ombra</h3>
+                  </div>
                   <p className="card-description">
                     A full-stack admin panel for a game development company to
                     manage products and subscriptions, built with React,
@@ -434,7 +468,7 @@ export default function Home() {
                   </p>
 
                   <div>
-                    <span className="tech-tag">Next.js</span>
+                    <span className="tech-tag">React</span>
                     <span className="tech-tag">TypeScript</span>
                     <span className="tech-tag">Python</span>
                     <span className="tech-tag">Flask</span>
@@ -466,7 +500,18 @@ export default function Home() {
                   />
                 </div>
                 <div style={{ flex: 1 }}>
-                  <h3 className="card-title">Hyprfolio</h3>
+                  <div className="project-header">
+                    <div className="project-icon-mobile">
+                      <Image
+                        src="/hyprfolio.svg"
+                        alt="Hyprfolio Logo"
+                        width={36}
+                        height={36}
+                        style={{ borderRadius: "8px" }}
+                      />
+                    </div>
+                    <h3 className="card-title">Hyprfolio</h3>
+                  </div>
                   <p className="card-description">
                     An interactive portfolio website that simulates an Arch
                     Linux environment with the Hyprland window manager written
@@ -509,7 +554,18 @@ export default function Home() {
                   />
                 </div>
                 <div style={{ flex: 1 }}>
-                  <h3 className="card-title">Sentinel</h3>
+                  <div className="project-header">
+                    <div className="project-icon-mobile">
+                      <Image
+                        src="/drogon.png"
+                        alt="Sentinel Logo"
+                        width={36}
+                        height={36}
+                        style={{ borderRadius: "8px" }}
+                      />
+                    </div>
+                    <h3 className="card-title">Sentinel</h3>
+                  </div>
                   <p className="card-description">
                     Sentinel is a proof-of-concept, privacy and security-focused
                     messaging application I co-created with my friend Karlos. It
@@ -569,7 +625,18 @@ export default function Home() {
                   </div>
                 </div>
                 <div style={{ flex: 1 }}>
-                  <h3 className="card-title">This portfolio</h3>
+                  <div className="project-header">
+                    <div className="project-icon-mobile">
+                      <Image
+                        src="/portfolio.svg"
+                        alt="Portfolio Logo"
+                        width={36}
+                        height={36}
+                        style={{ borderRadius: "8px" }}
+                      />
+                    </div>
+                    <h3 className="card-title">This portfolio</h3>
+                  </div>
                   <p className="card-description">
                     Built with Next.js 15 and React 19, featuring Lenis-powered
                     smooth scrolling and Tailwind CSS. Clean, responsive layout
@@ -584,10 +651,10 @@ export default function Home() {
                     ]}
                   />
                   <div>
-                    <span className="tech-tag">React</span>
                     <span className="tech-tag">Next.js</span>
                     <span className="tech-tag">Tailwind CSS</span>
                     <span className="tech-tag">TypeScript</span>
+                    <span className="tech-tag">Lenis</span>
                   </div>
                 </div>
               </div>
