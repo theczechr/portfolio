@@ -1,0 +1,3 @@
+[submodule "public/hyprfolio"]
+	path = public/hyprfolio
+	url = https://github.com/theczechr/hyprfolio.git

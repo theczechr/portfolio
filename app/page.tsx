@@ -216,8 +216,12 @@ export default function Home() {
                         alignItems: "baseline",
                       }}
                     >
-                      <span style={{ margin: "0 0.5rem" }}>·</span>
-                      Apertia tech
+                      <span
+                        className="card-title"
+                        style={{ margin: "0 0.5rem" }}
+                      >
+                        · Apertia tech
+                      </span>
                     </span>
                   </div>
                   <p className="card-description">
@@ -521,6 +525,10 @@ export default function Home() {
                   <ResourceLinks
                     links={[
                       {
+                        href: "/hyprfolio",
+                        label: "Try it!",
+                      },
+                      {
                         href: "https://github.com/theczechr/hyprfolio",
                         label: "GitHub",
                       },
@@ -568,12 +576,12 @@ export default function Home() {
                   </div>
                   <p className="card-description">
                     Sentinel is a proof-of-concept, privacy and security-focused
-                    messaging application I co-created with my friend Karlos. It
+                    messaging application I co-created with my friend. It
                     features end-to-end encryption and utilizes WebSockets, the
                     Drogon HTTP web framework, and an SQL database to provide a
                     secure and efficient communication platform. After
-                    completing the text-based user interface and proof of
-                    concept, we open-sourced it and moved on to other projects.
+                    completing the TUI and proof of concept, we open-sourced it
+                    and moved on to other projects.
                   </p>
                   <ResourceLinks
                     links={[
@@ -639,8 +647,7 @@ export default function Home() {
                   </div>
                   <p className="card-description">
                     Built with Next.js 15 and React 19, featuring Lenis-powered
-                    smooth scrolling and Tailwind CSS. Clean, responsive layout
-                    for About, Experience, and Projects; open source.
+                    smooth scrolling and Tailwind CSS.
                   </p>
                   <ResourceLinks
                     links={[
