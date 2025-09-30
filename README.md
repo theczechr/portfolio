@@ -5,7 +5,7 @@
 <h2 align="center">Robin's Portfolio</h2>
 
 <p align="center">
-  Modern, fast, and accessible developer portfolio built with Next.js App Router, Tailwind CSS, TypeScript, and React 19.
+  Modern, straightforward, and minimalistic developer portfolio built with Next.js, Tailwind CSS, TypeScript, and React.
   <br />
   <em>Deployed on Vercel. Smooth scrolling powered by Lenis.</em>
 </p>
@@ -24,12 +24,12 @@
 Requirements:
 
 - Node.js ≥ 18.18
-- A package manager: `pnpm` (recommended), `npm`, `yarn`, or `bun`
+- A package manager: `pnpm`, `npm`, `yarn`, or `bun`
 
 Clone and install:
 
 ```bash
-git clone <your-repo-url> portfolio
+git clone <https://github.com/theczechr/portfolio.git> portfolio
 cd portfolio
 pnpm install   # or your package manager of choice
 ```
@@ -68,6 +68,4 @@ Feel free to fork this repository and use it as a starting point for your own po
 
 ## License
 
-MIT © Robin.
-
----
+This project is open source and available under the [MIT License](LICENSE).
