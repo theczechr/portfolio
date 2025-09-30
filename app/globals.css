@@ -293,23 +293,23 @@ body::-webkit-scrollbar {
   font-size: var(--text-base);
   font-weight: var(--font-normal);
 }
-#about .card-description a {
+.card-description a {
   color: var(--text-primary);
   font-weight: var(--font-semibold);
   text-decoration: none;
   transition: color 0.2s ease;
 }
-#about .card-description a:hover,
-#about .card-description a:focus-visible {
+.card-description a:hover,
+.card-description a:focus-visible {
   color: #4fd1c7;
   outline: none;
 }
 /* Ensure visited links don't change hue */
-#about .card-description a:visited {
+.card-description a:visited {
   color: var(--text-primary);
 }
-#about .card-description a:visited:hover,
-#about .card-description a:visited:focus-visible {
+.card-description a:visited:hover,
+.card-description a:visited:focus-visible {
   color: #4fd1c7;
 }
 

@@ -152,30 +152,32 @@ export default function Home() {
         {/* Right Content - Scrollable */}
         <div className="right-content">
           {/* About Section */}
-          <section id="about" className="section" style={{ paddingLeft: 24 }}>
+          <section id="about" className="section">
             <h2 className="section-title-mobile">About</h2>
-            <p className="card-description">
-              I'm a developer who loves experimenting with new technology and
-              building cool, nerdy projects. I mainly work with Python and
-              JavaScript (especially React). I've been coding since 2020,
-              starting out in Python, and I'm always eager to pick up new skills
-              and tools.
-            </p>
-            <p className="card-description">
-              Currently, I'm working as an AI Software Engineer at{" "}
-              <a href="https://apertia.ai/">Apertia</a> while studying Computer
-              Science in my second year at{" "}
-              <a href="https://fit.vut.cz/">VUT FIT</a> in Brno. I'm passionate
-              about AI, machine learning, and large language models. I also
-              enjoy exploring blockchain, cybersecurity, and game development. I
-              value open-source software and try to publish most of my projects
-              publicly.
-            </p>
-            <p className="card-description">
-              Outside of work and studies, I like to challenge myself with side
-              projects that blend my interests and tech. I enjoy learning by
-              doing and sharing what I create openly.
-            </p>
+            <section style={{ padding: "12px" }}>
+              <p className="card-description">
+                I'm a developer who loves experimenting with new technology and
+                building cool, nerdy projects. I mainly work with Python and
+                JavaScript (especially React). I've been coding since 2020,
+                starting out in Python, and I'm always eager to pick up new
+                skills and tools.
+              </p>
+              <p className="card-description">
+                Currently, I'm working as an AI Software Engineer at{" "}
+                <a href="https://apertia.ai/">Apertia</a> while studying
+                Computer Science in my second year at{" "}
+                <a href="https://fit.vut.cz/">VUT FIT</a> in Brno. I'm
+                passionate about AI, machine learning, and large language
+                models. I also enjoy exploring blockchain, cybersecurity, and
+                game development. I value open-source software and try to
+                publish most of my projects publicly.
+              </p>
+              <p className="card-description">
+                Outside of work and studies, I like to challenge myself with
+                side projects that blend my interests and tech. I enjoy learning
+                by doing and sharing what I create openly.
+              </p>
+            </section>
           </section>
 
           {/* Experience Section */}
@@ -226,9 +228,9 @@ export default function Home() {
                   </div>
                   <p className="card-description">
                     Designing and building Agentic AI, chatbots, custom AI data
-                    analysis, browser automation and various internal tools to
-                    accelerate company processes. Heavily utilizing cutting edge
-                    open-source projects, LLMs, APIs and tools.
+                    analysis, browser automation, and internal tools to
+                    accelerate company processes. Leveraging cutting-edge
+                    open-source projects, various LLMs, and REST APIs.
                   </p>
                   <ResourceLinks
                     links={[
@@ -246,6 +248,7 @@ export default function Home() {
                     <span className="tech-tag">LLMs</span>
                     <span className="tech-tag">Vector DBs</span>
                     <span className="tech-tag">GraphRAG</span>
+                    <span className="tech-tag">Autogen</span>
                     <span className="tech-tag">SQL</span>
                   </div>
                 </div>
@@ -392,10 +395,11 @@ export default function Home() {
                   <p className="card-description">
                     A cross-platform mobile application designed to help users
                     take care of their plants utilizing AI, image recognition
-                    APIs and algorithmization. With features such as flower
-                    recognition through AI, watering reminders, room layouts,
-                    and all the important information about your plants.
-                    Completely open-sourced.
+                    APIs and algorithmization. Our features offer flower
+                    recognition through AI, watering reminders, and all the
+                    important information about the user's plants. We won Best
+                    Business Pitch and placed second in Best STEM Project at{" "}
+                    <a href="https://jaczech.org/ja-expo/">JA Expo</a>.
                   </p>
                   <ResourceLinks
                     links={[
