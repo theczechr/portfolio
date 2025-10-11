@@ -17,6 +17,10 @@ function ResourceLinks({ links }: { links: ResourceLink[] }) {
           className="resource-link"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") e.stopPropagation();
+          }}
         >
           {link.label}
         </a>
@@ -184,7 +188,29 @@ export default function Home() {
           <section id="experience" className="section">
             <h2 className="section-title-mobile">Experience</h2>
             {/* Experience Card 1 */}
-            <div className="card">
+            <div
+              className="card"
+              role="link"
+              tabIndex={0}
+              style={{ cursor: "pointer" }}
+              onClick={() => {
+                window.open(
+                  "https://apertia.ai/",
+                  "_blank",
+                  "noopener,noreferrer"
+                );
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  window.open(
+                    "https://apertia.ai/",
+                    "_blank",
+                    "noopener,noreferrer"
+                  );
+                }
+              }}
+            >
               <div
                 style={{
                   display: "flex",
@@ -199,47 +225,66 @@ export default function Home() {
                   2024 — Present
                 </div>
                 <div style={{ flex: 1 }}>
-                  <div
-                    className="title-row"
+                  <a
+                    href="https://apertia.ai/"
+                    className="title-row cta-link"
                     style={{
                       marginBottom: "0.3rem",
+                      gap: 0,
+                    }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ")
+                        e.stopPropagation();
                     }}
                   >
-                    <h3 className="card-title" style={{ marginBottom: 0 }}>
+                    <h3
+                      className="card-title"
+                      style={{ marginBottom: 0, color: "inherit" }}
+                    >
                       AI Software Engineer
                     </h3>
                     <span
                       className="card-title"
                       style={{
                         marginBottom: 0,
-                        color: "var(--text-primary)",
-                        fontWeight: "var(--font-normal)",
+                        color: "inherit",
                         display: "flex",
-                        alignItems: "baseline",
+                        alignItems: "center",
                       }}
                     >
-                      <span
-                        className="card-title"
-                        style={{ margin: "0 0.5rem" }}
+                      <span style={{ margin: "0 0.5rem" }}>·</span>
+                      Apertia tech
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        width="16"
+                        height="16"
+                        className="arrow"
+                        aria-hidden="true"
+                        style={{
+                          marginLeft: "0.4rem",
+                          position: "relative",
+                          top: "1px",
+                        }}
                       >
-                        · Apertia tech
-                      </span>
+                        <path
+                          fillRule="evenodd"
+                          d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
                     </span>
-                  </div>
+                  </a>
                   <p className="card-description">
                     Designing and building Agentic AI, chatbots, custom AI data
                     analysis, browser automation, and internal tools to
                     accelerate company processes. Leveraging cutting-edge
                     open-source projects, various LLMs, and REST APIs.
                   </p>
-                  <ResourceLinks
-                    links={[
-                      {
-                        href: "https://apertia.ai/",
-                        label: "Website",
-                      },
-                    ]}
-                  />
 
                   <div>
                     <span className="tech-tag">Python</span>
@@ -255,7 +300,29 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="card">
+            <div
+              className="card"
+              role="link"
+              tabIndex={0}
+              style={{ cursor: "pointer" }}
+              onClick={() => {
+                window.open(
+                  "https://www.kyndryl.com/cz/cs",
+                  "_blank",
+                  "noopener,noreferrer"
+                );
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  window.open(
+                    "https://www.kyndryl.com/cz/cs",
+                    "_blank",
+                    "noopener,noreferrer"
+                  );
+                }
+              }}
+            >
               <div
                 style={{
                   display: "flex",
@@ -270,29 +337,60 @@ export default function Home() {
                   2023 — 2024
                 </div>
                 <div style={{ flex: 1 }}>
-                  <div
-                    className="title-row"
+                  <a
+                    href="https://www.kyndryl.com/cz/cs"
+                    className="title-row cta-link"
                     style={{
                       marginBottom: 0,
+                      gap: 0,
+                    }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ")
+                        e.stopPropagation();
                     }}
                   >
-                    <h3 className="card-title" style={{ marginBottom: 0 }}>
+                    <h3
+                      className="card-title"
+                      style={{ marginBottom: 0, color: "inherit" }}
+                    >
                       Intern Mobile Developer
                     </h3>
                     <span
                       className="card-title"
                       style={{
                         marginBottom: 0,
-                        color: "var(--text-primary)",
-                        fontWeight: "var(--font-normal)",
+                        color: "inherit",
                         display: "flex",
-                        alignItems: "baseline",
+                        alignItems: "center",
                       }}
                     >
                       <span style={{ margin: "0 0.5rem" }}>·</span>
                       Kyndryl
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        width="16"
+                        height="16"
+                        className="arrow"
+                        aria-hidden="true"
+                        style={{
+                          marginLeft: "0.4rem",
+                          position: "relative",
+                          top: "1px",
+                        }}
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
                     </span>
-                  </div>
+                  </a>
                   <p className="card-description">
                     Developed Plantiful, a plant-care app designed to help users
                     manage and care for their plants in a small 3-person team.
@@ -302,15 +400,6 @@ export default function Home() {
                     recognition, watering reminders, room layouts, and care
                     tips.
                   </p>
-                  <ResourceLinks
-                    links={[
-                      {
-                        href: "https://www.kyndryl.com/cz/cs",
-                        label: "Website",
-                      },
-                    ]}
-                  />
-
                   <div>
                     <span className="tech-tag">TypeScript</span>
                     <span className="tech-tag">React Native</span>
@@ -344,6 +433,7 @@ export default function Home() {
                   height="16"
                   className="arrow"
                   aria-hidden="true"
+                  style={{ position: "relative", top: "1px" }}
                 >
                   <path
                     fillRule="evenodd"
@@ -359,7 +449,29 @@ export default function Home() {
           <section id="projects" className="section">
             <h2 className="section-title-mobile">Projects</h2>
             {/* Project Card 1 */}
-            <div className="card">
+            <div
+              className="card"
+              role="link"
+              tabIndex={0}
+              style={{ cursor: "pointer" }}
+              onClick={() => {
+                window.open(
+                  "https://www.plantiful.cz",
+                  "_blank",
+                  "noopener,noreferrer"
+                );
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  window.open(
+                    "https://www.plantiful.cz",
+                    "_blank",
+                    "noopener,noreferrer"
+                  );
+                }
+              }}
+            >
               <div
                 style={{
                   display: "flex",
@@ -390,7 +502,40 @@ export default function Home() {
                         style={{ borderRadius: "8px" }}
                       />
                     </div>
-                    <h3 className="card-title">Plantiful</h3>
+                    <a
+                      href="https://www.plantiful.cz"
+                      className="cta-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ")
+                          e.stopPropagation();
+                      }}
+                    >
+                      <h3
+                        className="card-title"
+                        style={{ marginBottom: 0, color: "inherit" }}
+                      >
+                        Plantiful
+                      </h3>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        width="16"
+                        height="16"
+                        className="arrow"
+                        aria-hidden="true"
+                        style={{ position: "relative", top: "1px" }}
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </a>
                   </div>
                   <p className="card-description">
                     A cross-platform mobile application designed to help users
@@ -488,7 +633,21 @@ export default function Home() {
             </div>
 
             {/* Project Card 3 */}
-            <div className="card">
+            <div
+              className="card"
+              role="link"
+              tabIndex={0}
+              style={{ cursor: "pointer" }}
+              onClick={() => {
+                window.location.href = "/hyprfolio";
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  window.location.href = "/hyprfolio";
+                }
+              }}
+            >
               <div
                 style={{
                   display: "flex",
@@ -518,7 +677,38 @@ export default function Home() {
                         style={{ borderRadius: "8px" }}
                       />
                     </div>
-                    <h3 className="card-title">Hyprfolio</h3>
+                    <a
+                      href="/hyprfolio"
+                      className="cta-link"
+                      onClick={(e) => e.stopPropagation()}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ")
+                          e.stopPropagation();
+                      }}
+                    >
+                      <h3
+                        className="card-title"
+                        style={{ marginBottom: 0, color: "inherit" }}
+                      >
+                        Hyprfolio
+                      </h3>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        width="16"
+                        height="16"
+                        className="arrow"
+                        aria-hidden="true"
+                        style={{ position: "relative", top: "1px" }}
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </a>
                   </div>
                   <p className="card-description">
                     An interactive portfolio website that simulates an Arch
@@ -528,10 +718,6 @@ export default function Home() {
                   </p>
                   <ResourceLinks
                     links={[
-                      {
-                        href: "/hyprfolio",
-                        label: "Try it!",
-                      },
                       {
                         href: "https://github.com/theczechr/hyprfolio",
                         label: "GitHub",

@@ -400,6 +400,11 @@ body::-webkit-scrollbar {
   transition: color 0.2s ease;
   text-decoration: none;
   font-weight: var(--font-light);
+  opacity: 0.85;
+}
+
+.social-icon:hover {
+  opacity: 1;
 }
 
 .social-icon:hover {
@@ -445,6 +450,33 @@ body::-webkit-scrollbar {
 .cta-link:hover .arrow,
 .cta-link:focus-visible .arrow {
   transform: translateY(-2px);
+}
+/* Card-level hover/focus should also trigger CTA hover styles */
+.card:hover .cta-link,
+.card:focus-within .cta-link,
+.card:focus-visible .cta-link {
+  color: #4fd1c7;
+  outline: none;
+}
+.card:hover .cta-link .arrow,
+.card:focus-within .cta-link .arrow,
+.card:focus-visible .cta-link .arrow {
+  transform: translateY(-2px);
+}
+/* Suppress CTA hover when hovering or focusing ResourceLinks inside the card */
+.card:hover:has(.resource-link:hover) .cta-link {
+  color: var(--text-primary);
+}
+.card:hover:has(.resource-link:hover) .cta-link .arrow {
+  transform: none;
+}
+.card:focus-within:has(.resource-link:focus) .cta-link,
+.card:focus-within:has(.resource-link:focus-visible) .cta-link {
+  color: var(--text-primary);
+}
+.card:focus-within:has(.resource-link:focus) .cta-link .arrow,
+.card:focus-within:has(.resource-link:focus-visible) .cta-link .arrow {
+  transform: none;
 }
 .cta-container {
   margin-top: var(--space-4);
