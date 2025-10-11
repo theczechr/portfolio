@@ -639,12 +639,12 @@ export default function Home() {
               tabIndex={0}
               style={{ cursor: "pointer" }}
               onClick={() => {
-                window.location.href = "/hyprfolio";
+                window.open("/hyprfolio", "_blank", "noopener,noreferrer");
               }}
               onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") {
                   e.preventDefault();
-                  window.location.href = "/hyprfolio";
+                  window.open("/hyprfolio", "_blank", "noopener,noreferrer");
                 }
               }}
             >
@@ -680,6 +680,8 @@ export default function Home() {
                     <a
                       href="/hyprfolio"
                       className="cta-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
                       onKeyDown={(e) => {
                         if (e.key === "Enter" || e.key === " ")

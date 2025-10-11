@@ -281,6 +281,11 @@ body::-webkit-scrollbar {
   font-weight: var(--font-light);
 }
 
+/* Make experience timeline dates heavier */
+#experience .card-meta {
+  font-weight: var(--font-semibold);
+}
+
 .card-description {
   font-size: 1rem;
   color: var(--text-secondary);
