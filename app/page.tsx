@@ -845,8 +845,8 @@ export default function Home() {
                     <h3 className="card-title">Sentinel</h3>
                   </div>
                   <p className="card-description">
-                    Sentinel is a proof-of-concept, privacy and security-focused
-                    messaging application I co-created with my friend. It
+                    Sentinel is a privacy and security focused
+                    messaging terminal-based application I co-created with my friend. It
                     features end-to-end encryption and utilizes WebSockets, the
                     Drogon HTTP web framework, and an SQL database to provide a
                     secure and efficient communication platform. After
