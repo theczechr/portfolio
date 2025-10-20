@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/logo-dark.svg" alt="Logo" height="72" />
+  <img src="public/portfolio.svg" alt="Logo" height="72" />
 </p>
 
 <h2 align="center">Robin's Portfolio</h2>
@@ -8,15 +8,6 @@
   Modern, straightforward, and minimalistic developer portfolio built with Next.js, Tailwind CSS, TypeScript, and React.
   <br />
   <em>Deployed on Vercel. Smooth scrolling powered by Lenis.</em>
-</p>
-
-<p align="center">
-  <a href="https://nextjs.org">Next.js</a> •
-  <a href="https://react.dev">React 19</a> •
-  <a href="https://tailwindcss.com">Tailwind CSS v4</a> •
-  <a href="https://www.typescriptlang.org/">TypeScript</a> •
-  <a href="https://vercel.com/">Vercel</a> •
-  <a href="https://github.com/darkroomengineering/lenis">Lenis</a>
 </p>
 
 ## Quick Start
@@ -62,7 +53,7 @@ package.json         # Scripts and dependencies
 
 ## Forking
 
-Although I've done my best to make it easy to fork and use, this is my personal portfolio, so I've embedded one of my projects, [Hyprfolio](https://github.com/theczechr/hyprfolio), under the `/hyprfolio` route, you might wanna remove it ;). If you wanted to use it, it's included as a Git submodule, so you will need to initialize it after cloning (`git submodule update --init --recursive`).
+Although I've done my best to make it easy to fork and use, this is my personal portfolio, so I've embedded one of my projects, [Hyprfolio](https://github.com/theczechr/hyprfolio), under the `/hyprfolio` route, you might wanna remove it ;). If you wanted to use it, for whatever reason, it's included as a Git submodule, so you will need to initialize it after cloning (`git submodule update --init --recursive`).
 
 Feel free to fork this repository and use it as a starting point for your own portfolio.
 

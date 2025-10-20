@@ -22,7 +22,17 @@ function ResourceLinks({ links }: { links: ResourceLink[] }) {
             if (e.key === "Enter" || e.key === " ") e.stopPropagation();
           }}
         >
-          {link.label}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            className="resource-link-icon"
+            aria-hidden="true"
+          >
+            <path d="M12.232 4.232a2.5 2.5 0 0 1 3.536 3.536l-1.225 1.224a.75.75 0 0 0 1.061 1.06l1.224-1.224a4 4 0 0 0-5.656-5.656l-3 3a4 4 0 0 0 .225 5.865.75.75 0 0 0 .977-1.138 2.5 2.5 0 0 1-.142-3.667l3-3z" />
+            <path d="M11.603 7.963a.75.75 0 0 0-.977 1.138 2.5 2.5 0 0 1 .142 3.667l-3 3a2.5 2.5 0 0 1-3.536-3.536l1.225-1.224a.75.75 0 0 0-1.061-1.06l-1.224 1.224a4 4 0 1 0 5.656 5.656l3-3a4 4 0 0 0-.225-5.865z" />
+          </svg>
+          <span>{link.label}</span>
         </a>
       ))}
     </div>
@@ -95,7 +105,7 @@ export default function Home() {
                 }`}
                 onClick={() => scrollToSection("about")}
               >
-                About
+                ABOUT
               </a>
               <a
                 className={`nav-item ${
@@ -401,11 +411,12 @@ export default function Home() {
                     tips.
                   </p>
                   <div>
-                    <span className="tech-tag">TypeScript</span>
                     <span className="tech-tag">React Native</span>
-                    <span className="tech-tag">Firebase</span>
+                    <span className="tech-tag">TypeScript</span>
                     <span className="tech-tag">Tailwind CSS</span>
+                    <span className="tech-tag">Firebase</span>
                     <span className="tech-tag">Expo</span>
+                    <span className="tech-tag">Figma</span>
                   </div>
                 </div>
               </div>
@@ -454,16 +465,20 @@ export default function Home() {
               role="link"
               tabIndex={0}
               style={{ cursor: "pointer" }}
-              onClick={() => {
+              onClick={(event) => {
+                const target = event.target as HTMLElement | null;
+                if (target?.closest("a")) return;
                 window.open(
                   "https://www.plantiful.cz",
                   "_blank",
                   "noopener,noreferrer"
                 );
               }}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  const target = event.target as HTMLElement | null;
+                  if (target?.closest("a")) return;
+                  event.preventDefault();
                   window.open(
                     "https://www.plantiful.cz",
                     "_blank",
@@ -538,13 +553,74 @@ export default function Home() {
                     </a>
                   </div>
                   <p className="card-description">
-                    A cross-platform mobile application designed to help users
-                    take care of their plants utilizing AI, image recognition
-                    APIs and algorithmization. Our features offer flower
-                    recognition through AI, watering reminders, and all the
-                    important information about the user's plants. We won Best
-                    Business Pitch and placed second in Best STEM Project at{" "}
-                    <a href="https://jaczech.org/ja-expo/">JA Expo</a>.
+                    A cross-platform mobile app designed to help users take care
+                    of their plants utilizing AI, image recognition and
+                    algorithmization. We won{" "}
+                    <a
+                      href="https://www.redhat.com/en/summerschool"
+                      className="resource-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ fontSize: "inherit", gap: 0 }}
+                      onClick={(event) => event.stopPropagation()}
+                      onKeyDown={(event) => {
+                        if (event.key === "Enter" || event.key === " ") {
+                          event.stopPropagation();
+                        }
+                      }}
+                    >
+                      Redhat Summer Camp
+                    </a>
+                    ,{" "}
+                    <a
+                      href="https://www.kyndryl.com/cz/cs"
+                      className="resource-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ fontSize: "inherit", gap: 0 }}
+                      onClick={(event) => event.stopPropagation()}
+                      onKeyDown={(event) => {
+                        if (event.key === "Enter" || event.key === " ") {
+                          event.stopPropagation();
+                        }
+                      }}
+                    >
+                      Kyndryl Challenge
+                    </a>{" "}
+                    in 2022. Won Best Business Pitch and placed second in Best
+                    STEM Project category at{" "}
+                    <a
+                      href="https://jaczech.org/ja-expo/"
+                      className="resource-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ fontSize: "inherit", gap: 0 }}
+                      onClick={(event) => event.stopPropagation()}
+                      onKeyDown={(event) => {
+                        if (event.key === "Enter" || event.key === " ") {
+                          event.stopPropagation();
+                        }
+                      }}
+                    >
+                      JA Expo
+                    </a>{" "}
+                    in 2023. Placed third at{" "}
+                    <a
+                      href="https://www.fekt.cz/eeict/"
+                      className="resource-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ fontSize: "inherit", gap: 0 }}
+                      onClick={(event) => event.stopPropagation()}
+                      onKeyDown={(event) => {
+                        if (event.key === "Enter" || event.key === " ") {
+                          event.stopPropagation();
+                        }
+                      }}
+                    >
+                      FEKT EEICT
+                    </a>{" "}
+                    in 2024.
                   </p>
                   <ResourceLinks
                     links={[
@@ -573,8 +649,10 @@ export default function Home() {
                   <div>
                     <span className="tech-tag">React Native</span>
                     <span className="tech-tag">TypeScript</span>
+                    <span className="tech-tag">Tailwind CSS</span>
                     <span className="tech-tag">Firebase</span>
                     <span className="tech-tag">Expo</span>
+                    <span className="tech-tag">Figma</span>
                   </div>
                 </div>
               </div>
@@ -727,9 +805,9 @@ export default function Home() {
                     ]}
                   />
                   <div>
-                    <span className="tech-tag">JavaScript</span>
                     <span className="tech-tag">HTML</span>
                     <span className="tech-tag">CSS</span>
+                    <span className="tech-tag">JavaScript</span>
                   </div>
                 </div>
               </div>
