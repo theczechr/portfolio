@@ -292,8 +292,8 @@ export default function Home() {
                   <p className="card-description">
                     Designing and building Agentic AI, chatbots, custom AI data
                     analysis, browser automation, and internal tools to
-                    accelerate company processes. Leveraging cutting-edge
-                    open-source projects, various LLMs, and REST APIs.
+                    accelerate company processes. Working in Python alongside
+                    cutting-edge open-source projects, various LLMs, and APIs.
                   </p>
 
                   <div>
@@ -557,7 +557,7 @@ export default function Home() {
                     of their plants utilizing AI, image recognition and
                     algorithmization. We won{" "}
                     <a
-                      href="https://www.redhat.com/en/summerschool"
+                      href="https://research.redhat.com/blog/2022/10/26/open-source-values-are-the-focus-of-red-hat-summer-camp-in-brno/"
                       className="resource-link"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -573,7 +573,7 @@ export default function Home() {
                     </a>
                     ,{" "}
                     <a
-                      href="https://www.kyndryl.com/cz/cs"
+                      href="https://www.purkynka.cz/aktualne/finale-5-rocniku-souteze-kyndryl-challenge/"
                       className="resource-link"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -606,7 +606,7 @@ export default function Home() {
                     </a>{" "}
                     in 2023. Placed third at{" "}
                     <a
-                      href="https://www.fekt.cz/eeict/"
+                      href="https://www.eeict.cz/"
                       className="resource-link"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -845,8 +845,8 @@ export default function Home() {
                     <h3 className="card-title">Sentinel</h3>
                   </div>
                   <p className="card-description">
-                    Sentinel is a privacy and security focused
-                    messaging terminal-based application I co-created with my friend. It
+                    Sentinel is a privacy and security focused messaging
+                    terminal-based application I co-created with my friend. It
                     features end-to-end encryption and utilizes WebSockets, the
                     Drogon HTTP web framework, and an SQL database to provide a
                     secure and efficient communication platform. After
