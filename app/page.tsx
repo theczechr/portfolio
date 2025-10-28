@@ -606,7 +606,7 @@ export default function Home() {
                     </a>{" "}
                     in 2023. Placed third at{" "}
                     <a
-                      href="https://www.eeict.cz/"
+                      href="https://dspace.vut.cz/items/0f9ba30f-2d2e-412a-a55a-78d69b722061"
                       className="resource-link"
                       target="_blank"
                       rel="noopener noreferrer"
