@@ -188,6 +188,7 @@ body::-webkit-scrollbar {
   text-transform: uppercase;
   font-weight: var(--font-semibold);
   letter-spacing: 0.06em;
+  white-space: nowrap;
 }
 
 .nav-item::before {
@@ -405,6 +406,7 @@ body::-webkit-scrollbar {
   display: flex;
   gap: var(--space-4);
   margin-top: var(--space-8);
+  align-items: center;
 }
 
 .social-icon {
@@ -414,6 +416,46 @@ body::-webkit-scrollbar {
   text-decoration: none;
   font-weight: var(--font-light);
   opacity: 0.85;
+}
+
+.language-toggle {
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: var(--font-semibold);
+  letter-spacing: 0.08em;
+  padding: 0 var(--space-3);
+  line-height: 1;
+  opacity: 0.85;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.language-toggle:focus-visible {
+  outline: none;
+}
+
+.social-bubble {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.social-bubble:hover,
+.social-bubble:focus-visible {
+  background: rgba(79, 209, 199, 0.08);
+  border-color: rgba(79, 209, 199, 0.45);
+  color: #4fd1c7;
+  outline: none;
+  opacity: 1;
 }
 
 .social-icon:hover {

@@ -1,0 +1,120 @@
+{
+  "name": "Robin Jarůšek",
+  "title": "AI | Fullstack Engineer",
+  "tagline": "Rád vyvíjím zajímavé aplikace a stránky, které fungují.",
+  "nav": {
+    "about": "O mně",
+    "experience": "Zkušenosti",
+    "projects": "Projekty"
+  },
+  "sections": {
+    "about": "O mně",
+    "experience": "Zkušenosti",
+    "projects": "Projekty"
+  },
+  "resumeCta": "Zobrazit celé CV",
+  "languageToggle": {
+    "aria": "Přepnout do angličtiny"
+  },
+  "socialLabels": {
+    "github": "GitHub",
+    "facebook": "Facebook"
+  },
+  "about": {
+    "paragraphs": [
+      "Jsem vývojář, který rád experimentuje s novými technologiemi a rád pracuje na zajímavých projektech. Nejčastěji pracuji s Pythonem a JavaScriptem (hlavně Reactem). Programování se věnuji od roku 2020, začínal jsem v Pythonu a pořád mě baví učit se nové dovednosti a nástroje.",
+      "Momentálně pracuji jako AI Software Engineer v <a href=\"https://apertia.ai/\">Apertia</a> a zároveň studuji druhým rokem informatiku na <a href=\"https://fit.vut.cz/\">VUT FIT</a> v Brně. Baví mě AI, strojové učení a jazykové modely. Zajímám se také o blockchain, kyberbezpečnost a vývoj her. Mám rád open-source software a snažím se tak většinu projektů dávat veřejně.",
+      "Mimo práci a školu rád pracuji na věcech, které propojují mé zájmy a technologie. Nejvíc se učím tím, že věci tvořím, a výsledky sdílím veřejně."
+    ]
+  },
+  "experience": {
+    "items": [
+      {
+        "id": "apertia",
+        "period": "2024 — doposud",
+        "role": "AI Software Engineer",
+        "company": "Apertia tech",
+        "companyUrl": "https://apertia.ai/",
+        "description": "Navrhuji a vyvíjím agentní AI, chatboty, vlastní analýzy dat pomocí AI, automatizaci prohlížeče a interní nástroje, které zrychlují firemní procesy. Pracuji v Pythonu a využívám moderní open-source projekty, různé LLM a API.",
+        "tags": [
+          "Python",
+          "LangChain",
+          "RAG",
+          "LLMs",
+          "Vector DBs",
+          "GraphRAG",
+          "Autogen",
+          "SQL"
+        ]
+      },
+      {
+        "id": "kyndryl",
+        "period": "2023 — 2024",
+        "role": "Intern Mobile Developer",
+        "company": "Kyndryl",
+        "companyUrl": "https://www.kyndryl.com/cz/cs",
+        "description": "Vyvinuli jsme Plantiful, aplikaci pro péči o rostliny, v malém tříčlenném týmu. Zajišťoval jsem celý vývojový proces od plánování a designu po implementaci. Implementoval jsem funkce jako rozpoznání rostlin, upozornění na zalévání, rozvržení pokojů a tipy pro péči o rostliny.",
+        "tags": [
+          "React Native",
+          "TypeScript",
+          "Tailwind CSS",
+          "Firebase",
+          "Expo",
+          "Figma"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "plantifulDescription": "Cross-platform mobilní aplikace navržená tak, aby uživatelům pomohla starat se o své rostliny s využitím AI, rozpoznávání rostlin a algoritmizace. Vyhráli jsme <a href=\"https://research.redhat.com/blog/2022/10/26/open-source-values-are-the-focus-of-red-hat-summer-camp-in-brno/\">Redhat Summer Camp</a> a <a href=\"https://www.purkynka.cz/aktualne/finale-5-rocniku-souteze-kyndryl-challenge/\">Kyndryl Challenge</a> v roce 2022. Vyhráli jsme kategorii Best Business Pitch a získali druhé místo v kategorii Best STEM Project na <a href=\"https://jaczech.org/ja-expo/\">JA Expo</a> v roce 2023. V roce 2024 jsme skončili třetí na <a href=\"https://dspace.vut.cz/items/0f9ba30f-2d2e-412a-a55a-78d69b722061\">FEKT EEICT</a>.",
+    "plantifulLinks": [
+      {
+        "href": "/Plantiful.pdf",
+        "label": "Výzkum"
+      },
+      {
+        "href": "https://github.com/plantiful/app",
+        "label": "Aplikace"
+      },
+      {
+        "href": "https://github.com/plantiful/website",
+        "label": "Web"
+      },
+      {
+        "href": "https://www.purkynka.cz/aktualne/dostali-jsme-se-do-top-desitky-ja-studentskych-firem-letosniho-roku/",
+        "label": "Článek"
+      },
+      {
+        "href": "https://www.youtube.com/watch?v=zZ-SUUvdznc",
+        "label": "Video"
+      }
+    ],
+    "ombraDescription": "Full-stack administrační panel pro menší herní studio pro správu produktů a předplatných, postavené na Reactu, Tailwind CSS, shadcn/ui a Flasku se SQLAlchemy.",
+    "hyprfolioDescription": "Interaktivní portfolio, které simuluje prostředí Arch Linuxu se správcem oken Hyprland, napsané v čistém JavaScriptu bez frameworků.",
+    "hyprfolioLinks": [
+      {
+        "href": "https://github.com/theczechr/hyprfolio",
+        "label": "GitHub"
+      }
+    ],
+    "sentinelDescription": "Messaging aplikace zaměřená na soukromí a bezpečnost. Nabízí koncové šifrování a využívá WebSockety, framework Drogon a SQL databázi pro bezpečnou a efektivní komunikaci. Po dokončení TUI a proof of concept jsme projekt open-sourcenuli.",
+    "sentinelLinks": [
+      {
+        "href": "https://github.com/theczechr/Sentinel-server",
+        "label": "Server"
+      },
+      {
+        "href": "https://github.com/theczechr/Sentinel-client",
+        "label": "Klient"
+      }
+    ],
+    "portfolioTitle": "Toto portfolio",
+    "portfolioDescription": "Postaveno na Next.js 15 a Reactu 19 se smooth scrollingem díky Lenis a Tailwind CSS.",
+    "portfolioLinks": [
+      {
+        "href": "https://github.com/theczechr/portfolio",
+        "label": "GitHub"
+      }
+    ]
+  }
+}

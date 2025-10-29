@@ -1,0 +1,122 @@
+{
+  "name": "Robin Jarůšek",
+  "title": "AI | Fullstack Engineer",
+  "tagline": "I like to build cool stuff that works.",
+  "nav": {
+    "about": "ABOUT",
+    "experience": "Experience",
+    "projects": "Projects"
+  },
+  "sections": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects"
+  },
+  "resumeCta": "View Full Résumé",
+  "languageToggle": {
+    "aria": "Switch to Czech version"
+  },
+  "socialLabels": {
+    "github": "GitHub",
+    "facebook": "Facebook"
+  },
+  "about": {
+    "paragraphs": [
+      "I'm a developer who loves experimenting with new technology and building cool, nerdy projects. I mainly work with Python and JavaScript (especially React). I've been coding since 2020, starting out in Python, and I'm always eager to pick up new skills and tools.",
+      "Currently, I'm working as an AI Software Engineer at <a href=\"https://apertia.ai/\">Apertia</a> while studying Computer Science in my second year at <a href=\"https://fit.vut.cz/\">VUT FIT</a> in Brno. I'm passionate about AI, machine learning, and large language models. I also enjoy exploring blockchain, cybersecurity, and game development. I value open-source software and try to publish most of my projects publicly.",
+      "Outside of work and studies, I like to challenge myself with side projects that blend my interests and tech. I enjoy learning by doing and sharing what I create openly."
+    ]
+  },
+  "experience": {
+    "items": [
+      {
+        "id": "apertia",
+        "period": "2024 — Present",
+        "role": "AI Software Engineer",
+        "company": "Apertia tech",
+        "companyUrl": "https://apertia.ai/",
+        "description": "Designing and building Agentic AI, chatbots, custom AI data analysis, browser automation, and internal tools to accelerate company processes. Working in Python alongside cutting-edge open-source projects, various LLMs, and APIs.",
+        "tags": [
+          "Python",
+          "LangChain",
+          "RAG",
+          "LLMs",
+          "Vector DBs",
+          "GraphRAG",
+          "Autogen",
+          "SQL"
+        ]
+      },
+      {
+        "id": "kyndryl",
+        "period": "2023 — 2024",
+        "role": "Intern Mobile Developer",
+        "company": "Kyndryl",
+        "companyUrl": "https://www.kyndryl.com/cz/cs",
+        "description": "Developed Plantiful, a plant-care app designed to help users manage and care for their plants in a small 3-person team. Handled the entire development process, from planning and design to implementation and testing, while balancing work and resources. Implemented features such as plant recognition, watering reminders, room layouts, and care tips.",
+        "tags": [
+          "React Native",
+          "TypeScript",
+          "Tailwind CSS",
+          "Firebase",
+          "Expo",
+          "Figma"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "plantifulDescription": "A cross-platform mobile app designed to help users take care of their plants utilizing AI, image recognition and algorithmization. We won <a href=\"https://research.redhat.com/blog/2022/10/26/open-source-values-are-the-focus-of-red-hat-summer-camp-in-brno/\">Redhat Summer Camp</a>, <a href=\"https://www.purkynka.cz/aktualne/finale-5-rocniku-souteze-kyndryl-challenge/\">Kyndryl Challenge</a> in 2022. Won Best Business Pitch and placed second in Best STEM Project category at <a href=\"https://jaczech.org/ja-expo/\">JA Expo</a> in 2023. Placed third at <a href=\"https://dspace.vut.cz/items/0f9ba30f-2d2e-412a-a55a-78d69b722061\">FEKT EEICT</a> in 2024.",
+    "plantifulLinks": [
+      {
+        "href": "/Plantiful.pdf",
+        "label": "Research"
+      },
+      {
+        "href": "https://github.com/plantiful/app",
+        "label": "App"
+      },
+      {
+        "href": "https://github.com/plantiful/website",
+        "label": "Website"
+      },
+      {
+        "href": "https://www.purkynka.cz/aktualne/dostali-jsme-se-do-top-desitky-ja-studentskych-firem-letosniho-roku/",
+        "label": "Article"
+      },
+      {
+        "href": "https://www.youtube.com/watch?v=zZ-SUUvdznc",
+        "label": "Video"
+      }
+    ],
+    "ombraDescription": "A full-stack admin panel for a game development company to manage products and subscriptions, built with React, Tailwind CSS, shadcn/ui, and Flask with SQLAlchemy.",
+    "hyprfolioDescription": "An interactive portfolio website that simulates an Arch Linux environment with the Hyprland window manager written in pure JavaScript with no external dependencies or frameworks.",
+    "hyprfolioLinks": [
+      {
+        "href": "https://github.com/theczechr/hyprfolio",
+        "label": "GitHub"
+      }
+    ],
+    "sentinelDescription": "Sentinel is a privacy and security focused messaging terminal-based application I co-created with my friend. It features end-to-end encryption and utilizes WebSockets, the Drogon HTTP web framework, and an SQL database to provide a secure and efficient communication platform. After completing the TUI and proof of concept, we open-sourced it and moved on to other projects.",
+    "sentinelLinks": [
+      {
+        "href": "https://github.com/theczechr/Sentinel-server",
+        "label": "Server"
+      },
+      {
+        "href": "https://github.com/theczechr/Sentinel-client",
+        "label": "Client"
+      }
+    ],
+    "portfolioTitle": "This portfolio",
+    "portfolioDescription": "Built with Next.js 15 and React 19, featuring Lenis-powered smooth scrolling and Tailwind CSS.",
+    "portfolioLinks": [
+      {
+        "href": "https://github.com/theczechr/portfolio",
+        "label": "GitHub"
+      }
+    ]
+  }
+}
+
+
