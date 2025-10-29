@@ -169,6 +169,7 @@ body::-webkit-scrollbar {
   line-height: var(--leading-relaxed);
   margin-top: var(--space-4);
   font-weight: var(--font-normal);
+  white-space: nowrap;
 }
 
 .navigation {
@@ -593,6 +594,7 @@ body::-webkit-scrollbar {
 
   .text-bio {
     margin: var(--space-3) 0;
+    white-space: normal;
   }
 
   .navigation {

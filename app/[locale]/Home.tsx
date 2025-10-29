@@ -157,7 +157,7 @@ export default function Home({ locale, content }: HomeProps) {
             <header>
               <h1 className="text-name">{content.name}</h1>
               <p className="text-title">{content.title}</p>
-              <p className="text-bio" style={{ whiteSpace: "nowrap" }}>
+              <p className="text-bio">
                 {content.tagline}
               </p>
             </header>
